@@ -8,7 +8,7 @@ export default defineComponent({
 
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1 class="border-2">This is an about page</h1>
   </div>
 </template>
 
