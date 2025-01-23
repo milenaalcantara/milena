@@ -103,7 +103,7 @@ export default defineComponent({
   flex-direction: row;
   gap: 32px;
   padding: 4px 0px;
-  margin-top: 115px;
+  margin-top: 57px;
 }
 
 .social {
@@ -114,6 +114,7 @@ export default defineComponent({
   border: 3px solid #000000;
   border-radius: 4px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .social:hover {
@@ -121,7 +122,7 @@ export default defineComponent({
   color: #ffffff;
 }
 
-img {
+.banner {
   height: max-content;
   width: max-content;
 }

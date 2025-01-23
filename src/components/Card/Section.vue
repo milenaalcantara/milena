@@ -29,7 +29,7 @@ export default defineComponent({
 
 <template>
   <section class="container" :style="cardStyle">
-    <slot name="title" class="title"></slot>
+    <slot name="title"></slot>
     <slot name="content" class="content"></slot>
   </section>
 </template>
@@ -37,16 +37,11 @@ export default defineComponent({
 <style scoped>
 .container {
   width: 100vw;
-  padding: 60px 80px;
+  padding: 92px 100px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.title > h1 {
-  font-weight: normal;
-  font-size: 56px;
 }
 </style>
