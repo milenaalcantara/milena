@@ -28,20 +28,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="container" :style="cardStyle">
+  <section class="w-full py-[92px] px-[100px] flex flex-col justify-center items-center" :style="cardStyle">
     <slot name="title"></slot>
     <slot name="content" class="content"></slot>
   </section>
 </template>
-
-<style scoped>
-.container {
-  width: 100vw;
-  padding: 92px 100px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>

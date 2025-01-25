@@ -73,7 +73,7 @@ export default defineComponent({
   <main>
     <Section v-for="section in sections" :key="section.id" :mode="section.mode">
       <template #title>
-        <h1>
+        <h1 class="font-normal tracking-[-0.96px] leading-[56px] text-5xl text-center capitalize mb-[60px]">
           {{ section.firstTitle }} <b>{{ section.lastTitle }}</b>
         </h1>
       </template>
@@ -83,16 +83,3 @@ export default defineComponent({
     </Section>
   </main>
 </template>
-
-<style scoped>
-h1 {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 56px;
-  letter-spacing: -0.96px;
-  margin-bottom: 60px;
-}
-
-
-</style>

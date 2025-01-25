@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faGit,
+  faGitAlt,
   faJs,
   faVuejs,
   faReact,
@@ -19,14 +19,15 @@ import Skill from "../../../components/Card/Skill.vue";
 export default defineComponent({
   name: "Skills",
   components: {
-    Skill,
+    FontAwesomeIcon,
+    Skill
   },
   data() {
     return {
       skills: [
         {
           id: 1,
-          icon: faGit,
+          icon: faGitAlt,
           name: "Git",
         },
         {
@@ -86,28 +87,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="container">
-    <div
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-10 gap-x-[70px]">
+    <Skill
       v-for="skill in skills"
       :key="skill.id"
-      class="flex flex-col p-6 justify-center items-center gap-8 rounded border-2 border-black bg-white transition duration-0 hover:duration-300 hover:bg-black text-black hover:text-white"
-    >
-      <FontAwesomeIcon :icon="skill.icon" class="text-[56px]" />
-      <span
-        class="w-full font-bold leading-6 text-sm text-center tracking-[-0.4px] capitalize"
-      >
-        {{ skill.name }}
-      </span>
-    </div>
+      :icon="skill.icon"
+      :name="skill.name"
+    />
   </div>
 </template>
-
-<style scoped>
-.container {
-  display: grid;
-  grid-template-columns: 186px 186px 186px 186px 186px;
-  grid-template-rows: 186px 186px;
-  column-gap: 70px;
-  row-gap: 40px;
-}
-</style>
