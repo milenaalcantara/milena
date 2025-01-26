@@ -1,10 +1,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { CardMode } from "../../models/card";
-import AboutView from "../AboutView.vue";
 import Section from "../../components/Card/Section.vue";
 import Presentation from "./Sections/Presentation.vue";
 import Skills from "./Sections/Skills.vue";
+import AboutMe from "./Sections/AboutMe.vue";
+import Projects from "./Sections/Projects.vue";
+// import Contact from "./Sections/Contact.vue";
 
 export default defineComponent({
   name: "HomeView",
@@ -23,45 +25,24 @@ export default defineComponent({
         },
         {
           id: 2,
-          firstTitle: "My",
+          firstTitle: "Minhas",
           lastTitle: "Skills",
-          mode: CardMode.LIGHT,
+          mode: CardMode.DARK,
           content: Skills,
         },
         {
           id: 3,
-          firstTitle: "My",
-          lastTitle: "Experience",
-          mode: CardMode.DARK,
-          content: AboutView,
-        },
-        {
-          id: 4,
-          firstTitle: "About",
-          lastTitle: "Me",
-          mode: CardMode.LIGHT,
-          content: AboutView,
-        },
-        {
-          id: 5,
-          firstTitle: "My",
-          lastTitle: "Projects",
-          mode: CardMode.DARK,
-          content: AboutView,
-        },
-        {
-          id: 6,
-          firstTitle: "My",
-          lastTitle: "Testimonial",
-          mode: CardMode.LIGHT,
-          content: AboutView,
-        },
-        {
-          id: 7,
           firstTitle: "",
           lastTitle: "",
           mode: CardMode.LIGHT,
-          content: AboutView,
+          content: AboutMe,
+        },
+        {
+          id: 4,
+          firstTitle: "Meus",
+          lastTitle: "Projetos",
+          mode: CardMode.DARK,
+          content: Projects,
         },
       ],
     };
@@ -72,7 +53,7 @@ export default defineComponent({
 <template>
   <main>
     <Section v-for="section in sections" :key="section.id" :mode="section.mode">
-      <template #title>
+      <template v-if="section.firstTitle !== ''" #title>
         <h1 class="font-normal tracking-[-0.96px] leading-[56px] text-5xl text-center capitalize mb-[60px]">
           {{ section.firstTitle }} <b>{{ section.lastTitle }}</b>
         </h1>

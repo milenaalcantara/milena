@@ -87,7 +87,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-10 gap-x-[70px]">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] lg:gap-y-10 lg:gap-x-[70px]">
     <Skill
       v-for="skill in skills"
       :key="skill.id"

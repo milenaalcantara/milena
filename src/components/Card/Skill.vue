@@ -26,7 +26,7 @@ export default defineComponent({
 
 <template>
   <div
-    class="flex flex-col w-[186px] h-[186px] gap-8 justify-center items-center rounded border-2 border-black bg-white transition duration-0 hover:duration-300 hover:bg-black text-black hover:text-white"
+    class="flex flex-col max-w-[186px] max-h-[186px] min-w-[160px] min-h-[160px] gap-8 justify-center items-center rounded border-2 border-white bg-black transition duration-0 hover:duration-300 hover:bg-white text-white hover:text-black"
   >
     <FontAwesomeIcon :icon="icon" class="text-[56px]" />
     <span

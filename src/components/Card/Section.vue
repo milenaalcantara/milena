@@ -5,12 +5,6 @@ import { defineComponent, type PropType } from "vue";
 export default defineComponent({
   name: "Section",
   props: {
-    firstTitle: {
-      type: String,
-    },
-    lastTitle: {
-      type: String,
-    },
     mode: {
       type: Number as PropType<CardMode>,
       required: true,
@@ -28,7 +22,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="w-full py-[92px] px-[100px] flex flex-col justify-center items-center" :style="cardStyle">
+  <section class="w-full px-[16px] py-[40px] xl:py-[92px] xl:px-[100px] flex flex-col justify-center items-center" :style="cardStyle">
     <slot name="title"></slot>
     <slot name="content" class="content"></slot>
   </section>
