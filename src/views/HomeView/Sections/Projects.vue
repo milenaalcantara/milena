@@ -66,7 +66,7 @@ export default defineComponent({
 
 <template>
     <div v-for="project in projects">
-        <div 
+        <!-- <div 
             v-if="project.presentation === 'left'"
             class="w-full py-5 flex flex-col gap-[28px] xl:gap-[40px] items-center justify-start lg:flex-row min-w-[343px] max-w-[1216px]"
         >
@@ -79,10 +79,9 @@ export default defineComponent({
                 <p class="font-normal text-[#71717A] tracking-[0.32px] leading-6 text-base">{{ project.description }}</p>
                 <a :href="project.projectUrl" class="text-xl text-white" target="_blank"><FontAwesomeIcon :icon="iconShare" /></a>
             </div>
-        </div>
+        </div> -->
 
         <div 
-            v-else
             class="w-full py-5 flex flex-col-reverse gap-[28px] xl:gap-[40px] items-center justify-start lg:flex-row min-w-[343px] max-w-[1216px]"
         >
             <div class="flex flex-col gap-[28px] lg:max-w-[582px] items-start">
