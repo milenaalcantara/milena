@@ -29,12 +29,14 @@ export default defineComponent({
       <div class="flex flex-row gap-8 mt-[57px]">
         <a 
           href="https://www.linkedin.com/in/milimaalc/" 
+          target="_blank"
           class="text-2xl py-4 px-5 bg-white hover:bg-black border-2 rounded border-black text-black hover:text-white transition duration-0 hover:duration-300"
         >
           <FontAwesomeIcon :icon="linkedinIcon" />
         </a>
         <a 
           href="https://github.com/milenaalcantara" 
+          target="_blank"
           class="text-2xl py-4 px-5 bg-white hover:bg-black border-2 rounded border-black text-black hover:text-white transition duration-0 hover:duration-300"
         >
           <FontAwesomeIcon :icon="githubIcon" />
