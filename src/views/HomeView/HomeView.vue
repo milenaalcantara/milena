@@ -11,7 +11,7 @@ import Projects from "./Sections/Projects.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
-    Section,
+    Section
   },
   data() {
     return {
